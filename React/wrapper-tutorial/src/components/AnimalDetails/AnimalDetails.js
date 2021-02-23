@@ -14,10 +14,13 @@ default:
       return '🌱';
 }
 }
-export default function AnimalDetails({diet}){
+export default function AnimalDetails({diet,scienticName}){
 return(
 <div>
 <h4>Details:</h4>
+<div>
+Scientic Name:{scienticName}
+</div>
 <div>
 Diet:{diet.map(food=>covertFood(food)).join(' ')}
 </div>
@@ -27,4 +30,5 @@ Diet:{diet.map(food=>covertFood(food)).join(' ')}
 
 AnimalDetails.propTypes ={
 diet: PropTypes.arrayOf(PropTypes.string).isRequired,
+scienticName:PropTypes.string.isRequired,
 }
