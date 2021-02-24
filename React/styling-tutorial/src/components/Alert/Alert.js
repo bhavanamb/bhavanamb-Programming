@@ -3,8 +3,24 @@ import PropTypes from 'prop-types';
 import './Alert.css';
 
 export default function Alert({children,type,title}){
-return <div className={`alert-wrapper ${type}`}>
-     <h2>{title}</h2>
+const colors ={
+error: '#F56260',
+success:'#6DA06F'
+}
+const style={
+heading:{
+     color:colors[type],
+     margin: '0 0 10px 0',
+},
+wrapper:{
+     border:`${colors[type]} solid 1px`,
+     marginBottom:15,
+     padding:15,
+     position:'relative'
+}
+}
+return <div style={style.wrapper}>
+     <h2 style={style.heading}>{title}</h2>
      {children}
      </div>
 }
