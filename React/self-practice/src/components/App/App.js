@@ -1,9 +1,12 @@
-
-import './App.css';
-import Sample from '../../components/sample/Sample'
+import "./App.css";
+import Sample from "../../components/sample/Sample";
+import UseHookClick from "../../components/HooksPractise/UseHookClick";
 function App() {
   return (
-    <Sample/>
+    <div>
+      <Sample />
+      <UseHookClick />
+    </div>
   );
 }
 
